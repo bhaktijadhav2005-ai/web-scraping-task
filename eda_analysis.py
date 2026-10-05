@@ -87,3 +87,32 @@ for col in numeric_cols:
 
 print("\nGraphs created successfully!")
 print("Check the eda_outputs folder.")
+
+# Step 13: Chi-Square Hypothesis Test
+
+from scipy.stats import chisquare
+
+# Count quotes for each author
+author_counts = df["Author"].value_counts()
+
+# Expected frequency:
+# Assume quotes are equally distributed among all authors
+expected_count = [len(df) / len(author_counts)] * len(author_counts)
+
+# Perform Chi-Square test
+chi_stat, p_value = chisquare(
+    f_obs=author_counts.values,
+    f_exp=expected_count
+)
+
+print("\n--- Chi-Square Hypothesis Test ---")
+print("Chi-Square Statistic:", round(chi_stat, 4))
+print("P-value:", round(p_value, 4))
+
+# Interpretation
+if p_value < 0.05:
+    print("Result: Reject the Null Hypothesis.")
+    print("Conclusion: Quotes are not equally distributed among authors.")
+else:
+    print("Result: Fail to Reject the Null Hypothesis.")
+    print("Conclusion: There is not enough evidence that quotes are unevenly distributed.")
