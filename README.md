@@ -133,9 +133,72 @@ Since the p-value is less than 0.05, the Null Hypothesis was rejected.
 
 **Conclusion:** There is statistically significant evidence that the quotes are not equally distributed among the authors.
 
-### Project Files
+### Project Files 
 
 ```text
 eda_analysis.py
 eda_outputs/
 └── EDA_Report.md
+
+# Task 3: Data Visualization
+
+## Objective
+
+The objective of this task is to transform the raw quotes dataset into meaningful visualizations such as charts and graphs. The visualizations help identify patterns, trends, and important insights from the dataset.
+
+## Tools Used
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- VS Code
+- GitHub
+
+## Dataset
+
+The visualization is performed on the `quotes_dataset.csv` dataset.
+
+The dataset contains:
+
+- Quote
+- Author
+- Tags
+
+## Visualizations Created
+
+### 1. Top 10 Authors by Number of Quotes
+
+A horizontal bar chart was created to identify authors with the highest number of quotes.
+
+**Key Insight:**
+- Albert Einstein has the highest number of quotes with 8.
+- J.K. Rowling and Marilyn Monroe have 6 quotes each.
+- Dr. Seuss and Bob Marley have 3 quotes each.
+
+### 2. Top 10 Quote Tags
+
+A horizontal bar chart was created to identify the most frequently occurring quote tags.
+
+**Key Insight:**
+- `inspirational` and `love` are the most frequent tags with 9 occurrences each.
+- `life` appears 8 times.
+- `humor` appears 5 times.
+- `books` and `reading` appear 4 times each.
+
+## Data Story
+
+The visualizations show that a small number of authors contribute a large portion of the quotes in the dataset. Albert Einstein is the most frequently represented author.
+
+The tag analysis shows that inspirational, love, and life-related themes are dominant in the dataset. This indicates that the quotes mainly focus on motivational and emotional topics.
+
+## Project Files
+
+- `data_visualization.py` – Python script used to create visualizations
+- `visualizations/top_10_authors.png` – Author frequency chart
+- `visualizations/top_10_tags.png` – Tag frequency chart
+- `visualizations/visualization_report.md` – Visualization report
+
+## Conclusion
+
+Data visualization converts raw data into clear and understandable graphical information. The charts created in this task make it easier to compare authors, identify popular themes, and communicate meaningful insights from the quotes dataset.
