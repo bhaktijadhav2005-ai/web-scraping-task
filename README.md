@@ -189,3 +189,53 @@ The visualizations show that some authors contribute more quotes than others. Th
 ## Conclusion
 
 Data visualization makes raw data easier to understand and helps identify important patterns and insights through graphical representation.
+
+## Task 4: Sentiment Analysis
+
+### Objective
+The objective of this task is to analyze textual data and classify quotes into Positive, Negative, and Neutral sentiments using Natural Language Processing (NLP) techniques.
+
+### Dataset
+The analysis was performed on `quotes_dataset.csv`, which contains 50 quotes along with their authors and tags.
+
+### Methodology
+VADER (Valence Aware Dictionary and sEntiment Reasoner) was used for sentiment analysis.
+
+The compound sentiment score was used for classification:
+
+- Compound score >= 0.05 → Positive
+- Compound score <= -0.05 → Negative
+- Compound score between -0.05 and 0.05 → Neutral
+
+### Sentiment Results
+
+| Sentiment | Number of Quotes |
+|-----------|------------------:|
+| Positive  | 27 |
+| Neutral   | 12 |
+| Negative  | 11 |
+| **Total** | **50** |
+
+### Key Findings
+
+1. Positive sentiment is the most common category, with 27 quotes.
+2. Neutral sentiment appears in 12 quotes.
+3. Negative sentiment appears in 11 quotes.
+4. The dataset contains more positive quotes than negative or neutral quotes.
+5. The overall emotional tone of the dataset is predominantly positive.
+
+### Visualization
+
+The sentiment distribution is visualized using a bar chart:
+
+`sentiment_outputs/sentiment_distribution.png`
+
+### Output
+
+The sentiment-labeled dataset is saved as:
+
+`sentiment_outputs/sentiment_results.csv`
+
+### Conclusion
+
+The sentiment analysis successfully classified all 50 quotes into Positive, Neutral, and Negative categories. The results show that positive sentiment dominates the dataset, indicating an overall positive emotional tone among the collected quotes.
